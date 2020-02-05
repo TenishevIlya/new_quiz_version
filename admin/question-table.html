@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  	<title>Таблица вопросов</title>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="node_modules/normalize.css">
+  	<link rel="stylesheet" href="../assets/styles/admin-styles/style.css">
+</head>
+<body class="all-body-content">
+    <nav class="bg-light">
+        <div class="nav-wrap">
+            <a href="#" class="logo" data-translate="ADMIN_PANEL">Панель администратора</a>
+            <div class="nav-list">
+                <a href="index.html" class="text-muted nav-wrap-link"><span data-translate="MAIN">Главная</span></a>
+                <a href="question-table.html" class="text-muted nav-wrap-link"><span data-translate="QUESTION_TABLE">Таблица вопросов</span></a>
+                <a href="edit.html" class="text-muted nav-wrap-link"><span data-translate="ADD_QEUSTION">Добавить вопрос</span></a>
+                <a href="#" class="text-muted nav-wrap-link"><span data-translate="MY_TESTS">Мои тесты</span></a>
+                <a href="#" class="text-muted nav-wrap-link"><span data-translate="SETTINGS">Настройки</span></a>
+            </div>
+            <a href="signin.html" class="btn btn-outline-primary log-out" data-translate="LOG_OUT">Выйти</a>
+        </div>  
+    </nav>
+    <main>
+    	  <div class="container">
+        	  <h1 data-translate="QUESTION_TABLE">Таблица вопросов</h1>
+        	  <a href="edit.html" class="btn btn-outline-primary rounded-pill add-quest"><i class="fas fa-plus"></i><span>Добавить вопрос</span></a>  
+              <div class="tableArea"></div>
+              <!-- <table class="table table-bordered table-responsive">
+      	    <thead>
+      	      <tr>
+        	        <th scope="col" data-translate="ID">Номер</th>
+        	        <th scope="col" data-translate="QUESTION">Вопрос</th>
+        	        <th scope="col" data-translate="TYPE">Тип</th>
+        	        <th scope="col" data-translate="ANSWER">Ответ</th>
+        	        <th scope="col" data-translate="ACTIONS">Действия</th>
+      	      </tr>
+      	    </thead>
+              <tbody>
+      	      <tr>
+      	          <th scope="row">1</th>
+      	          <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus provident quo similique, aperiam pariatur autem, accusantium rerum excepturi accusamus odio.
+                  </td>
+      	          <td>22.09.2019</td>
+      	          <td>true</td>
+      	          <td>
+                      <a href="#" class="btn btn-outline-primary rounded-pill question-table-link">
+                          <i class="far fa-edit"></i>
+                      </a>
+                      <a href="#" class="btn btn-outline-danger rounded-pill question-table-link">
+                          <i class="far fa-trash-alt"></i>
+                      </a>
+                  </td>
+      	      </tr>
+      	      <tr>
+        	        <th scope="row">2</th>
+        	        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos accusamus voluptatem cum adipisci! Vitae dolor, excepturi. Dolorum a eos enim.</td>
+        	        <td>21.09.2019</td>
+        	        <td>false</td>
+        	        <td>
+                      <a href="#" class="btn btn-outline-primary rounded-pill question-table-link">
+                          <i class="far fa-edit"></i>
+                      </a><a href="#" class="btn btn-outline-danger rounded-pill question-table-link">
+                          <i class="far fa-trash-alt"></i>
+                      </a>
+                  </td>
+      	      </tr>
+      	      <tr>
+        	        <th scope="row">3</th>
+        	        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum perferendis neque atque doloribus provident? Ab esse porro nulla, soluta similique!</td>
+        	        <td>22.09.2019</td>
+        	        <td>Current</td>
+        	        <td>
+                      <a href="#" class="btn btn-outline-primary rounded-pill question-table-link">
+                          <i class="far fa-edit"></i>
+                      </a>
+                      <a href="#" class="btn btn-outline-danger rounded-pill question-table-link">
+                          <i class="far fa-trash-alt"></i>
+                      </a>
+                  </td>
+      	      </tr>
+      	      <tr>
+        	        <th scope="row">4</th>
+        	        <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed in commodi, impedit possimus placeat sunt a assumenda, voluptate iste voluptatem.</td>
+        	        <td>23.09.2019</td>
+        	        <td>Promise</td>
+        	        <td>
+                       <a href="#" class="btn btn-outline-primary rounded-pill question-table-link">
+                          <i class="far fa-edit"></i>
+                      </a> 
+                      <a href="#" class="btn btn-outline-danger rounded-pill question-table-link">
+                          <i class="far fa-trash-alt"></i>
+                      </a>
+                  </td>
+      	      </tr>
+              </tbody>
+            </table> -->
+            <!-- <form id="editQuestion">
+                <div class="col-container">
+                  	<label for="question" class="font-weight-bold">Вопрос:</label>
+                  	<textarea class="form-control" name="questionText" id="question"></textarea>
+                </div>
+                <hr>
+                <div class="col-container add">
+                    <label for="check-form" class="font-weight-bold">Прикрепить теги:</label> 	
+                	  <div class="form-check" id="check-form">	
+                  		  <input type="checkbox" class="form-check-input" id="first">
+                  		  <label class="form-check-label" for="first">
+                  	        #first
+                  	   </label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="second">
+                		    <label class="form-check-label" for="second">
+                	          #second
+                	      </label>
+            	      </div> 
+              	    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="third">
+              		      <label class="form-check-label" for="third">
+              	            #third
+              	        </label>
+              	    </div>
+                </div>
+                <hr>	
+                <div class="row-container">
+              	    <div class="col-container answ"> 
+                	      <label class="font-weight-bold">Виды ответов:</label>
+                	      <select class="form-control">
+                  	        <option selected>Единственный ответ</option>
+                  	        <option>Множественный ответ</option>	
+                  	        <option>Текстовый</option>
+                	      </select>	
+              	    </div>
+              	    <div class="col-container answ"> 
+                	      <label for="answer" class="font-weight-bold">Ответ:</label>
+                	      <textarea id="answer" name="answerText" class="form-control"></textarea>	
+              	    </div>
+                </div>
+                <hr>
+                 <a href="#" class="btn btn-outline-primary">Добавить вопрос</a> 
+                <button type="submit" class="btn btn-outline-primary submit-btn addQuestion">Добавить вопрос</button>
+            </form> -->
+        </div>
+    </main>
+
+    <!-- <script src="../assets/scripts/multilingual-changer.js"></script> -->
+    <!-- <script src="../assets/scripts/addingQuestions/addQuestion.js"></script> -->
+    <script src="../assets/scripts/addingQuestions/outputQuestions.js"></script>
+</body>
+</html>

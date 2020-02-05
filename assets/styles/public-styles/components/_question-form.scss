@@ -1,0 +1,143 @@
+/* questions.html */
+.question {
+  width: 500px;
+  margin: 50px auto;
+  	
+  .input-text {
+    width: 100%;
+    padding: 10px 0 10px 10px;	
+    border: $border-size solid $secondary-color;
+    border-radius: 7px;
+    outline: none;
+    box-sizing: border-box;
+  
+    &:focus {
+      border: $border-size solid $border-color;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);	
+    }
+  }
+}
+.next-btn {
+  @include question-btn();
+  flex-grow: 1;
+
+  &:hover {
+    background-color: $success-color;
+    border: $border-size solid $success-color;   	
+  }
+
+  &:active {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    outline: none;
+  }	
+}
+.back-btn {
+  @include question-btn();
+  flex-grow: 1;
+
+  &:hover{
+    background-color: $secondary-color;
+    border: $border-size solid $secondary-color;	
+  }	
+
+  &:active {
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    outline: none;
+  }
+}
+.skip-btn {
+  @include question-btn();
+}
+.question-navigation {
+  display: flex;
+  justify-content: space-between; 
+  margin-top: 10px;	
+  align-items: center;
+}
+.question-content {
+  font-size: 15px;	
+}
+.question-number {
+  flex-grow: 1;
+  text-align: center;	
+}
+/**************************/
+
+/* radio-public */
+.radio-answers, .checkbox-answers {
+  @include col-container();
+
+  .radio-row, .checkbox-row{
+    padding: 15px 0 15px 1.2em;
+    border-top: 1px solid $secondary-color;
+    border-bottom: 1px solid $secondary-color;
+    
+    &:hover {
+      background-color: $secondary-color;	
+
+    }
+  }	
+
+  label:first-of-type, label:last-of-type {
+    border: none;	
+  }
+}
+
+/**************/
+
+
+/* checkbox-public */
+.checkbox-input, .radio-input {
+  -webkit-appearance: none;
+  position: absolute;
+  
+  &:checked + .checkbox-case {
+    background-color: #4A90E2;
+  	background-image: url(../../images/check.svg); 
+  } 
+
+  &:checked + .radio-case {
+    background-color: #4A90E2;  
+  }
+}
+.checkbox-case {
+  @include check-items();		
+}
+.radio-case {
+  @include check-items();	
+  border-radius: 0.6em; 
+}
+/*************************/
+
+.error {
+  color: red;
+}
+
+.custom-table {
+  width: 500px;
+  margin: 50px auto; 
+  border-collapse: separate;
+  border-radius: 15px;
+  border: $primary-color solid 2px;
+  tr {
+    border: none;
+  }
+  td {
+    padding: 3px; 
+    padding: 10px;
+    border-top: $primary-color solid 2px;
+    border-left: none;
+    border-right: none;
+    text-align: center;  
+  }
+  th {
+    border: none;
+    padding: 3px;
+  }
+}
+
+.backToIndex {
+  padding: 10px;
+  width: 500px;
+  margin: 50px auto;
+}

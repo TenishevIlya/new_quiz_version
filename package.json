@@ -1,0 +1,46 @@
+{
+  "name": "quiz-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server",
+    "build:js": "babel assets/scripts -d assets/dist/scripts",
+    "dev:js": "babel assets/scripts -d assets/dist/scripts -w",
+    "build:css": "node-sass assets/styles/public-styles/style.scss  assets/dist/styles/style.css",
+    "dev:css": "node-sass -w assets/styles/public-styles/style.scss -o assets/dist/styles",
+    "buildProject:css": "node-sass assets/styles/public-styles/style.scss  assets/styles/public-styles/style.css",
+    "devProject:css": "node-sass -w assets/styles/public-styles/style.scss -o assets/styles/public-styles/style.css",
+    "server": "npx lite-server -c front-server.config.json",
+    "json-server": "npx json-server --watch assets/scripts/addingQuestions/db.json --port 3000",
+    "eslint": "npx eslint assets/scripts/",
+    "buildModules": "browserify assets/scripts/addingQuestions/addQuestion.js -o  assets/scripts/addingQuestions/outputQuestions.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TenishevIlya/quiz-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TenishevIlya/quiz-project/issues"
+  },
+  "homepage": "https://github.com/TenishevIlya/quiz-project#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "babel-core": "^6.26.3",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.0",
+    "eslint": "^6.7.1",
+    "jasmine-console-reporter": "^3.1.0",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.13.0"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
+}
